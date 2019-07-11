@@ -12,7 +12,7 @@ services:
     volumes:
      - ./web:/code # modified here to take into account the new app pat
      - anil-web-directory:/root/myweblogs # log here for every ephemeras names
-    links:
+    networks:
      - anilskynet
     environment:
      - DATADOG_HOST=d- anilskynettadog # used by the web app to initialize the Datadog library
